@@ -74,9 +74,9 @@ class gTTS:
     """
 
     GOOGLE_TTS_MAX_CHARS = 100  # Max characters the Google TTS API takes at a time
-    GOOGLE_TTS_URL = "https://translate.google.com/translate_tts"
+    GOOGLE_TTS_URL = "https://translate.google.cn/translate_tts"
     GOOGLE_TTS_HEADERS = {
-        "Referer": "http://translate.google.com/",
+        "Referer": "http://translate.google.cn/",
         "User-Agent":
             "Mozilla/5.0 (Windows NT 10.0; WOW64) "
             "AppleWebKit/537.36 (KHTML, like Gecko) "
@@ -104,10 +104,10 @@ class gTTS:
     ):
 
         # Debug
-        for k, v in locals().items():
-            if k == 'self':
-                continue
-            log.debug("%s: %s", k, v)
+        # for k, v in locals().items():
+        #     if k == 'self':
+        #         continue
+        #     log.debug("%s: %s", k, v)
 
         # Text
         assert text, 'No text to speak'
